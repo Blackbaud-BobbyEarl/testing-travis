@@ -5,7 +5,7 @@ do
 done
 
 # Only build on releases
-if [ "TRAVIS_TAG" != "" ]; then
+if [ "$TRAVIS_TAG" != "" ]; then
    echo "I AM A TAG!"
 fi
 
