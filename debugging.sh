@@ -8,3 +8,6 @@ done
 if [ "TRAVIS_TAG" != "" ]; then
    echo "I AM A TAG!"
 fi
+
+tag="${TRAVIS_TAG:-dev}"
+echo "tag or default: $tag" 
