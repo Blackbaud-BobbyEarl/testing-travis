@@ -4,7 +4,8 @@ node_js:
 before_install:
   - chmod +x debugging.sh
 script: ./debugging.sh
-#branches:
-#  only:
-#    - master
+branches:
+  only:
+    - master
+    - /^v\d+.\d+.\d+/
 
