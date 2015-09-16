@@ -3,7 +3,7 @@ node_js:
   - '0.10'
 before_install:
   - chmod +x debugging.sh
-script: ./debugging.sh
+before_script: ./debugging.sh
 branches:
   only:
     - master
