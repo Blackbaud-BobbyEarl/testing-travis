@@ -1,7 +1,9 @@
 {
   "name": "test",
   "version": "1.0.0",
-  "devDependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.5"
+  },
   "scripts": {
     "test": "grunt"
   }
