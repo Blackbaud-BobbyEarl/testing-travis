@@ -15,7 +15,7 @@ module.exports = function (grunt) {
       'TRAVIS_BUILD_NUMBER',
       'TRAVIS_COMMIT'
     ];
-    
+    console.log('RUNNING TEST: ' + process.env.TEST_NAME);
     props.forEach(function (prop) {
       console.log(prop + ': ' + process.env[prop]);
     });
