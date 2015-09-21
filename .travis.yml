@@ -5,11 +5,15 @@ before_install:
   - npm install -g grunt-cli
   - chmod +x debugging.sh
 before_script: ./debugging.sh
+env:
+  matrix:
+    - TEST_NAME=testA
+    - TEST_NAME=testB
+    - TEST_NAME=testC
 branches:
   only:
     - master
     - /^v\d+.\d+.\d+/
-
 notifications:
   webhooks:
     - http://sky-savage.cloudapp.net/savage/travis
