@@ -20,6 +20,6 @@ module.exports = function (grunt) {
       console.log(prop + ': ' + process.env[prop]);
     });
     
-    console.log('IS PULL REQUEST? ' + process.env.TRAVIS_PULL_REQUEST !== 'false')
+    console.log('IS PULL REQUEST? ' + (process.env.TRAVIS_PULL_REQUEST !== 'false' ? 'yes' : 'no'));
   });
 };
