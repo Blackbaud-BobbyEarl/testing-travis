@@ -1,7 +1,3 @@
 # testing-travis
 
-
-
-
-
-Test PR
+Testing push to master.
