@@ -21,5 +21,7 @@ module.exports = function (grunt) {
     });
     
     console.log('IS PULL REQUEST? ' + (process.env.TRAVIS_PULL_REQUEST !== 'false' ? 'yes' : 'no'));
+    
+    console.log("HAVE A GREAT DAY!");
   });
 };
