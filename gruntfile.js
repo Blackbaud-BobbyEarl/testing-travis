@@ -6,6 +6,7 @@ module.exports = function (grunt) {
   grunt.registerTask('default', function () {
     var target = 'local',
       props = [
+        'TRAVIS',
         'TRAVIS_REPO_SLUG',
         'TRAVIS_SECURE_ENV_VARS',
         'TRAVIS_BRANCH',
