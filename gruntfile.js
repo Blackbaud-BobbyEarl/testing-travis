@@ -20,7 +20,7 @@ module.exports = function (grunt) {
     console.log('RUNNING TEST: ' + process.env.TEST_NAME);
 
     props.forEach(function (prop) {
-      console.log(prop + ': ' + process.env[prop]);
+      console.log(prop + ': ' + process.env[prop] + ' (' + typeof process.env[prop] + ')');
     });
 
     if (process.env.TRAVIS) {
