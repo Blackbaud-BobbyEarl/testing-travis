@@ -17,3 +17,6 @@ branches:
 notifications:
   webhooks:
     - http://sky-savage.cloudapp.net/savage/travis
+env:
+  global:
+    - secure: asdfasdfasdfasdlfkjas;dlfkjasd;lfjsdlfks
