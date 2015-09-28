@@ -24,7 +24,7 @@ module.exports = function (grunt) {
     });
 
     if (process.env.TRAVIS) {
-        if (process.env.TRAVIS_SECURE_ENV_VARS) {
+        if (process.env.TRAVIS_SECURE_ENV_VARS === 'true') {
             if (process.env.TRAVIS_PULL_REQUEST === 'false') {
                 target = 'travis-push';
             } else {
