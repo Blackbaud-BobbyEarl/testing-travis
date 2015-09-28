@@ -24,7 +24,7 @@ module.exports = function (grunt) {
     });
 
     if (process.env.TRAVIS) {
-        if (process.env.TRAVIS_REPO_SLUG === 'blackbaud/sky') {
+        if (process.env.TRAVIS_REPO_SLUG.toLowerCase() === 'blackbaud-bobbyearl/testing-travis') {
             if (process.env.TRAVIS_PULL_REQUEST === 'false') {
                 target = 'travis-push';
             } else {
