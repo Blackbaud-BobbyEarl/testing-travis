@@ -9,7 +9,7 @@ before_script:
   - export RELEASE_BRANCH="^(master|rc-)\.*$"
   - export RELEASE_COMMENT="^Release v[0-9]+\.[0-9]+\.[0-9]+"
   - export RELEASE_VERSION=${LAST_COMMIT_MESSAGE#Release }
-  - if [[ $LAST_COMMIT_MESSAGE =~ $RELEASE_COMMENT ]]; then export IS_RELEASE=true; else export IS_RELEASE=false; fi
+  - if [[ $TRAVIS_BRANCH =~ $RELEASE_BRANCH && $LAST_COMMIT_MESSAGE =~ $RELEASE_COMMENT ]]; then export IS_RELEASE=true; else export IS_RELEASE=false; fi
   - ./debugging.sh
 branches:
   only:
