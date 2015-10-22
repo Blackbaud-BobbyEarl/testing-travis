@@ -9,7 +9,7 @@ if [ "$TRAVIS_TAG" != "" ]; then
    echo "I AM A TAG!"
 fi
 
-if [[ $IS_RELEASE ]]; then
+if [[ "$IS_RELEASE" == "true" ]]; then
   echo "I AM A RELEASE"
 fi
 
