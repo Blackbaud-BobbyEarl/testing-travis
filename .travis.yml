@@ -13,8 +13,7 @@ before_script:
   - ./debugging.sh
 branches:
   only:
-  - "$RELEASE_BRANCH"
-  - /^custom-.*$/
+  - /^(master|custom-)\.*$/
 notifications:
   webhooks:
   - http://sky-savage.cloudapp.net/savage/travis
