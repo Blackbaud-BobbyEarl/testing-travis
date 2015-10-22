@@ -11,7 +11,11 @@ fi
 
 if [[ "$IS_RELEASE" == "true" ]]; then
   echo "I AM A RELEASE"
+  tag="$RELEASE_VERSION"
+else
+  echo "I AM NOT, REPEAT NOT, A RELEASE"
+  tag="dev"
 fi
 
-tag="${TRAVIS_TAG:-dev}"
-echo "tag or default: $tag" 
+echo $tag
+
