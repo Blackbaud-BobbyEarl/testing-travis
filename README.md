@@ -8,6 +8,7 @@ Testing pull request from fork. x5
 
 Not a release
 
+- Release v2.1.0-2
 - Release v2.1.0-1
 - Release v2.0.6
 - Release v2.0.5
