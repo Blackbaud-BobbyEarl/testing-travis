@@ -13,7 +13,7 @@ before_script:
   - ./debugging.sh
 branches:
   only:
-  - $RELEASE_BRANCH
+  - "$RELEASE_BRANCH"
   - /^(custom-)\.*$/
 notifications:
   webhooks:
