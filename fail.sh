@@ -1,3 +1,5 @@
+set -e
+
 thiasdkjasdf
 as
 df
