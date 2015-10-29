@@ -6,4 +6,7 @@ echo "No failing now"
 #echo "Fail the build on purpose"
 #exit 1
 
-echo "Should get here"
+# Stupid error
+asdfasdfasdfasdf
+
+echo "Should not get here"
