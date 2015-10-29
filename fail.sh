@@ -1,3 +1,4 @@
+# Can A comment go here?
 set -e
 
 #echo "No failing now"
