@@ -7,6 +7,6 @@ echo "No failing now"
 #exit 1
 
 # Stupid error
-asdfasdfasdfasdf
+#asdfasdfasdfasdf
 
 echo "Should not get here"
