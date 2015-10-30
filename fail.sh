@@ -8,7 +8,7 @@ echo "No failing now"
 
 # Stupid error
 #asdfasdfasdfasdf
-asdf = "bobby"
+asdf="bobby"
 echo $asdf
 
 echo "Should get here"
