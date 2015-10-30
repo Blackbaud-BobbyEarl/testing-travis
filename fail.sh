@@ -8,7 +8,7 @@ echo "No failing now"
 
 # Stupid error
 #asdfasdfasdfasdf
-test="bobby"
-echo $test
+asdf = "bobby"
+echo $asdf
 
 echo "Should get here"
