@@ -1,4 +1,4 @@
 set -e
 
-npm config set email sky-build-user@blackbaud.com
+echo -e "blackbaud-skyux\n$NPM_PASSWORD\nsky-build-user@blackbaud.com" | npm login
 npm whoami
