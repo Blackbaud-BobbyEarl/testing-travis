@@ -1,6 +1,6 @@
 {
-  "name": "test",
-  "version": "2.0.3",
+  "name": "blackbaud-bobbyearl-test",
+  "version": "2.0.4",
   "devDependencies": {
     "grunt": "~0.4.5"
   },
