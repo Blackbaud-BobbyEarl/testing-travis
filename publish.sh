@@ -10,3 +10,4 @@ cat README.md
 sed -i'' -E -e 's/asdf/fdsa/g' README.md
 echo "AFTER"
 cat README.md
+ls -la
