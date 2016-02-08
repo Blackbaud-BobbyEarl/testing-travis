@@ -5,5 +5,5 @@ set -e
 #npm publish
 
 export RELEASE_VERSION=1.2.3
-sed -i '' -E -e 's/blackbaudcdn.net\/skyux\/[0-9]+\.[0-9]+\.[0-9]+\//blackbaudcdn.net\/skyux\/'"$RELEASE_VERSION"'\//g' README.md
+sudo sed -i '' -E -e 's/blackbaudcdn.net\/skyux\/[0-9]+\.[0-9]+\.[0-9]+\//blackbaudcdn.net\/skyux\/'"$RELEASE_VERSION"'\//g' README.md
 echo README.md
