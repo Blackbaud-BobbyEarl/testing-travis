@@ -23,7 +23,7 @@ case $mode in
 esac
 
 echo "CURRENT WORKING DIRECTORY IS"
-cwd
+pwd
 
 if [[ -d "$cache_dir" ]]; then
   echo "$cache_dir exists"
