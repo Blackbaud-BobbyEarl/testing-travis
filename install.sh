@@ -33,5 +33,9 @@ if [[ -d "$cache_dir" ]]; then
     else
       echo "$(cmp --silent $json_file $CONFIG_CACHE/$json_file)"
     fi
+  else
+    echo "$CONFIG_CACHE dir does not exist"
   fi
+else
+  echo "$cache_dir does not exist"
 fi
