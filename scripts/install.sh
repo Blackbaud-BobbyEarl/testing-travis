@@ -27,5 +27,5 @@ else
   echo "Unable to use cache for $mode.  Beginning install now."
   $mode install
   echo "Caching $json_file for future builds."
-  cp $json_file $CONFIG_CACHE
+  cp $json_file ../$CONFIG_CACHE
 fi
