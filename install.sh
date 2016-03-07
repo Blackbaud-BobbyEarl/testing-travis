@@ -25,8 +25,8 @@ esac
 echo "CURRENT WORKING DIRECTORY IS"
 pwd
 
-if [[ -d "$cache_dir" ]]; then
-  echo "$cache_dir exists"
+if [[ -d "$HOME/$cache_dir" ]]; then
+  echo "$HOME/$cache_dir exists"
 
   if [[ -d "$CONFIG_CACHE" ]]; then
     echo "$CONFIG_CACHE dir exists"
@@ -40,5 +40,5 @@ if [[ -d "$cache_dir" ]]; then
     echo "$CONFIG_CACHE dir does not exist"
   fi
 else
-  echo "$cache_dir does not exist"
+  echo "$HOME/$cache_dir does not exist"
 fi
