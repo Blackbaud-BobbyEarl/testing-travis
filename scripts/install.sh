@@ -21,6 +21,9 @@ case $mode in
     ;;
 esac
 
+pwd
+echo $TRAVIS_BUILD_DIR
+
 # Verify cache directories exist and no difference in config files
 if [[ -d "../$cache_dir" ]] && cmp --silent ../$json_file ../$cache_dir/$json_file; then
   echo "$mode install successfully bypassed with cache."
