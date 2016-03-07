@@ -22,12 +22,12 @@ case $mode in
 esac
 
 # Verify cache directories exist and no difference in config files
-if [[ -d "../$cache_dir" ]] && cmp --silent ../$json_file $cache_dir/$json_file; then
+if [[ -d "../$cache_dir" ]] && cmp --silent ../$json_file ../$cache_dir/$json_file; then
   echo "$mode install successfully bypassed with cache."
 else
   echo "Unable to use cache for $mode.  Beginning install now."
   $mode install
   echo "Caching $json_file for future builds."
-  cp $json_file ../$cache_dir
+  cp ../$json_file ../$cache_dir/$json_file
   cat ../$cache_dir/$json_file
 fi
