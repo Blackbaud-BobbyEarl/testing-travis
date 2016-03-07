@@ -1,0 +1,22 @@
+{
+  "name": "blackbaud-bobbyearl-test",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Bobby Earl <bobby.earl@blackbaud.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/blackbaud-bobbyearl/testing-travis",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}
