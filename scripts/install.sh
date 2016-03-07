@@ -28,4 +28,5 @@ else
   $mode install
   echo "Caching $json_file for future builds."
   cp $json_file ../$CONFIG_CACHE
+  cat ../$CONFIG_CACHE/$json_file
 fi
