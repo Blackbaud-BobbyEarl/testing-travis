@@ -31,11 +31,11 @@ if [[ -d "$HOME/$cache_dir" ]]; then
   if [[ -d "$CONFIG_CACHE" ]]; then
     echo "$CONFIG_CACHE dir exists"
 
-    if [[ "$(cmp --silent $json_file $CONFIG_CACHE/$json_file)" ]]; then
+    if [[ "$(cmp --silent $HOME/$json_file $CONFIG_CACHE/$json_file)" ]]; then
       echo "$mode install successfully bypassed with cache."
     else
       echo "cmp failed"
-      cmp $json_file $CONFIG_CACHE/$json_file
+      cmp $HOME/$json_file $CONFIG_CACHE/$json_file
     fi
   else
     echo "$CONFIG_CACHE dir does not exist"
