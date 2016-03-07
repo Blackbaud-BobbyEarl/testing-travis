@@ -22,24 +22,9 @@ case $mode in
     ;;
 esac
 
-echo "CURRENT WORKING DIRECTORY IS"
-pwd
-
-if [[ -d "$HOME/$cache_dir" ]]; then
-  echo "$HOME/$cache_dir exists"
-
-  if [[ -d "$CONFIG_CACHE" ]]; then
-    echo "$CONFIG_CACHE dir exists"
-
-    if cmp --silent $json_file $CONFIG_CACHE/$json_file; then
-      echo "$mode install successfully bypassed with cache."
-    else
-      echo "cmp failed"
-      cmp $json_file $CONFIG_CACHE/$json_file
-    fi
-  else
-    echo "$CONFIG_CACHE dir does not exist"
-  fi
+if [[ -d "$HOME/$cache_dir" && -d "$CONFIG_CACHE" && cmp --silent $json_file $CONFIG_CACHE/$json_file ]]; then
+  echo "$mode install successfully bypassed with cache."
 else
-  echo "$HOME/$cache_dir does not exist"
+  echo "Unable to use cache for $mode.  Beginning install now."
+  $mode install
 fi
