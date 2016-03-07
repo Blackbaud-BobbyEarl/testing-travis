@@ -8,7 +8,6 @@ before_install:
 - chmod +x publish.sh
 - chmod +x install.sh
 install:
-  - ./install.sh junk
   - ./install.sh npm
   - ./install.sh bower
 before_script:
