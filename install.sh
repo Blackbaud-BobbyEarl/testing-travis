@@ -1,6 +1,7 @@
 # Even though we cache node_modules/bower_components, npm/bower install is still slow.
 # This allows us to only run npm/bower install when necessary.
 # Assumes either "npm" or "bower" is passed in as first argument.
+#Arbitrary change
 
 # Read mode passed in as first argument
 mode=$1
