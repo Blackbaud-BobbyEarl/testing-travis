@@ -1,7 +1,5 @@
 # Even though we cache node_modules/bower_components, npm/bower install is still slow.
 # This allows us to only run npm/bower install when necessary.
-# Assumes either "npm" or "bower" is passed in as first argument.
-#Arbitrary change
 
 # Read mode passed in as first argument
 mode=$1
@@ -22,6 +20,7 @@ case $mode in
     ;;
 esac
 
+# Verify cache directories exist and no difference in config files
 if [[ -d "$HOME/$cache_dir" ]] && [[ -d "$CONFIG_CACHE" ]] && cmp --silent $json_file $CONFIG_CACHE/$json_file; then
   echo "$mode install successfully bypassed with cache."
 else
