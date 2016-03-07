@@ -8,6 +8,8 @@ before_install:
 - chmod +x publish.sh
 - chmod +x install.sh
 install:
+  - npm install -g grunt-cli
+  - npm install -g bower
   - ./install.sh npm
   - ./install.sh bower
 before_script:
