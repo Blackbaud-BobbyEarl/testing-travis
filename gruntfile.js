@@ -29,7 +29,7 @@ module.exports = function (grunt) {
             test: {
                 // The preceeding dot + space allows the script to run in the same shell.
                 // We need this in order to set the BROWSER_STACK_BINARY_PID.
-                cmd: 'source ./scripts/child.sh'
+                cmd: '. ./scripts/child.sh'
             }
         }
     });
