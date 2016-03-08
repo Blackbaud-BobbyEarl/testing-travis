@@ -72,4 +72,5 @@ module.exports = function (grunt) {
     });
 
     grunt.loadNpmTasks('grunt-bump');
+    grunt.loadNpmTasks('grunt-exec');
 };
