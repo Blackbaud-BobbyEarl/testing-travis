@@ -6,11 +6,14 @@ before_install:
 - chmod +x fail.sh
 - chmod +x publish.sh
 - chmod +x scripts/install.sh
+- chmod +x scripts/child.sh
+- chmod +x scripts/child-after.sh
 install:
   - npm install -g grunt-cli
   - npm install -g bower
   - . ./scripts/install.sh npm
   - . ./scripts/install.sh bower
+  - grunt exec:test
 before_script:
   - export LAST_COMMIT_MESSAGE=`git log --format=%B -n 1 $TRAVIS_COMMIT`
   - export RELEASE_BRANCH="^(master|rc-)"
@@ -19,7 +22,7 @@ before_script:
   - if [[ $TRAVIS_BRANCH =~ $RELEASE_BRANCH && $LAST_COMMIT_MESSAGE =~ $RELEASE_COMMENT ]]; then export IS_RELEASE=true; fi
 script: ./debugging.sh && ./publish.sh
 after_script:
-  - echo $BROWSER_STACK_PID
+  - ./scripts/child-after.sh
 branches:
   only:
   - "$RELEASE_BRANCH"
