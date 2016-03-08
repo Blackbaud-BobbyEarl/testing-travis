@@ -5,6 +5,8 @@
 # Read mode passed in as first argument
 mode=$1
 
+BROWSER_STACK_PID=1337
+
 # Verify npm or bower scenario
 case $mode in
   npm)
