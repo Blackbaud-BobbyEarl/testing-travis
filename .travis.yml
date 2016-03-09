@@ -32,6 +32,7 @@ branches:
   - /^(custom-)\.*$/
   - master
 cache:
+  debug: true
   directories:
     - node_modules
     - bower_components
