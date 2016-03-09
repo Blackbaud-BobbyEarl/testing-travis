@@ -26,7 +26,7 @@ before_script:
 script: ./debugging.sh && ./publish.sh
 after_script:
   - ./scripts/child-after.sh
-  - if [ -f "./test-file.txt" ]; then cat ./test-file.txt; fi
+  - if [ -e ./test-file.txt ]; then cat ./test-file.txt; fi
 branches:
   only:
   - "$RELEASE_BRANCH"
