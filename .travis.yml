@@ -20,6 +20,7 @@ before_script:
   - export RELEASE_COMMENT="^Release v[0-9]+\.[0-9]+\.[0-9]+"
   - export RELEASE_VERSION=${LAST_COMMIT_MESSAGE#Release }
   - if [[ $TRAVIS_BRANCH =~ $RELEASE_BRANCH && $LAST_COMMIT_MESSAGE =~ $RELEASE_COMMENT ]]; then export IS_RELEASE=true; fi
+  - ls -la $HOME/.casher
 script: ./debugging.sh && ./publish.sh
 after_script:
   - ./scripts/child-after.sh
