@@ -46,7 +46,8 @@ module.exports = function (grunt) {
                 'TRAVIS_TAG',
                 'TRAVIS_JOB_NUMBER',
                 'TRAVIS_BUILD_NUMBER',
-                'TRAVIS_COMMIT'
+                'TRAVIS_COMMIT',
+                'CASHER_DIR'
             ];
 
         console.log('RUNNING TEST: ' + process.env.TEST_NAME);
