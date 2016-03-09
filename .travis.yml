@@ -21,6 +21,7 @@ before_script:
   - export RELEASE_VERSION=${LAST_COMMIT_MESSAGE#Release }
   - if [[ $TRAVIS_BRANCH =~ $RELEASE_BRANCH && $LAST_COMMIT_MESSAGE =~ $RELEASE_COMMENT ]]; then export IS_RELEASE=true; fi
   - ls -la $HOME/.casher
+  - cat $HOME/.casher/fetch.log
 script: ./debugging.sh && ./publish.sh
 after_script:
   - ./scripts/child-after.sh
