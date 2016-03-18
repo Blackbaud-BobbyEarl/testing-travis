@@ -12,3 +12,6 @@ sed -i -E -e 's/blackbaudcdn.net\/skyux\/[0-9]+\.[0-9]+\.[0-9]+\//blackbaudcdn.n
 echo "AFTER"
 cat README.md
 ls -la
+
+
+cat test-file.txt | openssl dgst -sha384 -binary | openssl enc -base64 -A  
