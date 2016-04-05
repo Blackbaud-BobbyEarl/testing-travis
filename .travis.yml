@@ -2,6 +2,7 @@ language: node_js
 node_js:
 - '4'
 before_install:
+- rvm install 2.2.0
 - ruby -v
 - chmod +x debugging.sh
 - chmod +x fail.sh
