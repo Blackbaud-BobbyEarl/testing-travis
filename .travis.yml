@@ -1,8 +1,6 @@
 language: node_js
 node_js:
 - '4'
-rvm:
-- 2.2.0
 before_install:
 - ruby -v
 - chmod +x debugging.sh
