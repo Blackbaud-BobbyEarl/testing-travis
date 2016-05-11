@@ -21,3 +21,8 @@ fi
 
 echo $tag
 
+echo "TESTING VARS"
+branch="$TRAVIS_BUILD_NUMBER-webdriver"
+branch="$branch-savage"
+echo $branch
+
