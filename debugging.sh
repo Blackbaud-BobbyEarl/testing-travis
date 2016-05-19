@@ -29,6 +29,8 @@ branch="$branch-savage"
 echo $branch
 
 echo "Added by Travis $TRAVIS_BUILD_NUMBER" >> test-file.txt
+git config --global user.email "travis@travis.org"
+git config --global user.name "Travis CI"
 git commit -am 'Added by Travis [ci skip]'
 git push origin master
 
