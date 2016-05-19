@@ -39,6 +39,9 @@ cache:
   directories:
     - node_modules
     - bower_components
+deploy:
+  on:
+    tags: true
 notifications:
   webhooks:
   - http://sky-savage.cloudapp.net/savage/travis
