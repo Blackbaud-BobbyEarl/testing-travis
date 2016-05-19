@@ -34,15 +34,12 @@ branches:
   - "$RELEASE_BRANCH"
   - /^(custom-)\.*$/
   - master
-  - /[0-9]+\.[0-9]+\.[0-9]+/
+  - /^v[0-9]+\.[0-9]+\.[0-9]+/
 cache:
   debug: true
   directories:
     - node_modules
     - bower_components
-deploy:
-  on:
-    tags: true
 notifications:
   webhooks:
   - http://sky-savage.cloudapp.net/savage/travis
