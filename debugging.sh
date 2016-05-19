@@ -11,6 +11,8 @@ if [ "$TRAVIS_TAG" != "" ]; then
    echo "I AM A TAG!"
 fi
 
+if [[ -n "$TRAVIS_TAG" ]]; then echo "I AM ANOTHER WAY TO TEST THAT THIS IS A TAG"; fi
+
 if [[ $IS_RELEASE ]]; then
   echo "I AM A RELEASE"
   tag="$RELEASE_VERSION"
