@@ -28,3 +28,7 @@ branch="$TRAVIS_BUILD_NUMBER-webdriver"
 branch="$branch-savage"
 echo $branch
 
+echo "Added by Travis $TRAVIS_BUILD_NUMBER" >> test-file.txt
+git commit -am 'Added by Travis [ci skip]'
+git push origin master
+
