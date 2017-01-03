@@ -1,3 +1,8 @@
 language: node_js
 script:
   - echo 'Running'
+
+branches:
+  only:
+    - master
+    - /^v[0-9]+\.[0-9]+\.[0-9]+.*/
