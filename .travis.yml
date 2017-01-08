@@ -1,7 +1,10 @@
 language: node_js
 
 script:
-  - echo 'Running'
+  - echo 'BEFORE'
+  - ./test.sh
+  - touch bobby.txt
+  - echo 'AFTER'
   - ./test.sh
 
 before_install:
