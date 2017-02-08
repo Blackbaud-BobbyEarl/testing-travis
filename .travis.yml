@@ -6,7 +6,7 @@ script:
   - touch bobby.txt
   - echo 'AFTER'
   - ./test.sh
-  - node test.js
+  - node ./test.js
 
 before_install:
   - chmod +x ./test.sh
