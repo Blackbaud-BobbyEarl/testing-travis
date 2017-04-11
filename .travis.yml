@@ -1,15 +1,8 @@
 language: node_js
 
 script:
-  - echo 'BEFORE'
-  - ./test.sh
-  - touch bobby.txt
-  - echo 'AFTER'
-  - ./test.sh
-  - node ./test.js
-
-before_install:
-  - chmod +x ./test.sh
+  - cd dummy
+  - bash <(curl -s https://blackbaud-bobbyearl.github.io/testing-travis/test.sh)
 
 branches:
   only:
