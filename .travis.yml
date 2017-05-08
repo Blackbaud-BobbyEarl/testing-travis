@@ -1,9 +1,9 @@
 language: node_js
 
 script:
+  - node test.js
   - cd dummy
   - bash <(curl -s https://blackbaud-bobbyearl.github.io/testing-travis/test.sh)
-  - node test.js
 
 branches:
   only:
