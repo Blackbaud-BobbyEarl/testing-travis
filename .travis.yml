@@ -1,7 +1,7 @@
 language: node_js
 
 script:
-  - bash <(curl -s https://blackbaud.github.io/skyux-travis/after-success.sh)
+  - bash <(curl -s https://blackbaud-bobbyearl.github.io/testing-travis/test.sh)
 
 branches:
   only:
