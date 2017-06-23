@@ -7,7 +7,7 @@ echo -e "Blackbaud - SKY UX Travis - After Success"
 # Publish a tag to NPM
 if [[ $NPM_TOKEN ]]; then
   echo -e "Using NPM_TOKEN"
-else if [[ $NPM_PASSWORD ]]; then
+elif [[ $NPM_PASSWORD ]]; then
   echo -e "USING NPM_PASSWORD"
 else
   echo -c "No credentials provided"
