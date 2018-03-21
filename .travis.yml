@@ -1,9 +1,15 @@
 language: node_js
 
 env:
+  global:
+    - TOPNOTCH=PAUL
+    
   matrix:
-    - RUN=A EXTRA=ASDF
-    - RUN=B EXTRA=JKL
+    - RUN=A 
+      EXTRA=ASDF
+
+    - RUN=B 
+      EXTRA=JKL
 
 before_install:
   - chmod +x ./scripts/A.sh
