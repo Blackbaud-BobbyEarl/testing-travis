@@ -2,8 +2,8 @@ language: node_js
 
 env:
   matrix:
-    - RUN=A
-    - RUN=B
+    - RUN=A EXTRA=ASDF
+    - RUN=B EXTRA=JKL
 
 before_install:
   - chmod +x ./scripts/A.sh
