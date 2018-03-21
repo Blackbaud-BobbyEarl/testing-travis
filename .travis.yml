@@ -1,7 +1,22 @@
 language: node_js
 
+env:
+  global:
+    - TOPNOTCH=PAUL
+    
+  matrix:
+    - RUN=A 
+      EXTRA=ASDF
+
+    - RUN=B 
+      EXTRA=JKL
+
+before_install:
+  - chmod +x ./scripts/A.sh
+  - chmod +x ./scripts/B.sh
+
 script:
-  - bash <(curl -s https://blackbaud-bobbyearl.github.io/testing-travis/test.sh)
+  - eval "./scripts/${RUN}.sh"
 
 branches:
   only:
