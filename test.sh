@@ -15,4 +15,5 @@ else
   echo -c "No credentials provided"
 fi
 
+gem install travis
 travis raw build/$TRAVIS_BUILD_ID --json
