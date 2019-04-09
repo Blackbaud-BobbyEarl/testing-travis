@@ -13,7 +13,7 @@ echo -e "Blackbaud - SKY UX Travis - After Success"
 #  echo -c "No credentials provided"
 #fi
 SKYUX_TEAM=(
-  BLACKBAUD-BOBBYEARL2
+  BLACKBAUD-BOBBYEARL
   BLACKBAUD-TERRYHELEMS
   BLACKBAUD-STEVEBRUSH
   BLACKBAUD-ALEXKINGMAN
