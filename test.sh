@@ -20,8 +20,8 @@ SKYUX_TEAM=(
   BLACKBAUD-TREVORBURCH 
 )
 
-gem install travis
-CREATED_BY=$(travis raw /v3/build/$TRAVIS_BUILD_ID --json --skip-completion-check | jq -r '.created_by.login'^^)
+#gem install travis
+CREATED_BY=$(travis raw /v3/build/$TRAVIS_BUILD_ID --json --skip-completion-check | jq -r '.created_by.login' | awk '{print toupper($0)}')
 
 if [[ "${SKYUX_TEAM[@]}" =~ "${CREATED_BY}" ]]; then
   echo -e "${CREATED_BY} has permission to release."
