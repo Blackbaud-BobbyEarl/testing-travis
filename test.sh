@@ -3,6 +3,8 @@ set -e
 
 echo -e "Blackbaud - SKY UX Travis - After Success"
 
+printenv
+
 # Necessary to stop pull requests from forks from running outside of Savage
 # Publish a tag to NPM
 if [[ $NPM_TOKEN ]]; then
