@@ -14,6 +14,17 @@ echo -e "Blackbaud - SKY UX Travis - After Success"
 #else
 #  echo -c "No credentials provided"
 #fi
+SKYUX_TEAM=(
+  Blackbaud-BobbyEarl
+  Blackbaud-PaulCrowder
+  Blackbaud-TerryHelems
+  Blackbaud-SteveBrush
+  Blackbaud-AlexKingman
+  Blackbaud-TrevorBurch
+)
 
 gem install travis
-travis raw /v3/build/$TRAVIS_BUILD_ID --json --skip-completion-check | jq -r '.created_by.login'
+createdBy=$(travis raw /v3/build/$TRAVIS_BUILD_ID --json --skip-completion-check | jq -r '.created_by.login')
+
+echo $createdBy
+echo $SKYUX_TEAM
