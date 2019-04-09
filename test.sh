@@ -20,11 +20,14 @@ SKYUX_TEAM=(
   BLACKBAUD-TREVORBURCH
 )
 
+# Install the TravisCI CLI so we can easily make API calls.
 gem install travis
+
+# Read the uppercase GitHub username that initiated the build.
 CREATED_BY=$(travis raw /v3/build/$TRAVIS_BUILD_ID --json --skip-completion-check | jq -r '.created_by.login' | tr 'a-z' 'A-Z' )
 
-# The spaces here are extremely important.
-# They key "user" in "username" being false.
+# The spaces here are extremely important as they stop false positives.
+# For example, without them, "user" would match "username".
 if [[ " ${SKYUX_TEAM[@]} " =~ " ${CREATED_BY} " ]]; then
   echo -e "${CREATED_BY} has permission to release."
 else
