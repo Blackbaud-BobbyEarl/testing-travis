@@ -3,15 +3,6 @@ set -e
 
 echo -e "Blackbaud - SKY UX Travis - After Success"
 
-containsElement () {
-  local e match="$1"
-  shift
-  for e; do [[ "$e" == "$match" ]] && return 0; done
-  return 1
-}
-
-#printenv
-
 # Necessary to stop pull requests from forks from running outside of Savage
 # Publish a tag to NPM
 #if [[ $NPM_TOKEN ]]; then
@@ -30,10 +21,10 @@ SKYUX_TEAM=(
 )
 
 gem install travis
-createdBy=$(travis raw /v3/build/$TRAVIS_BUILD_ID --json --skip-completion-check | jq -r '.created_by.login') | tr '[:upper:]' '[:lower:]'
+createdBy=$(travis raw /v3/build/$TRAVIS_BUILD_ID --json --skip-completion-check | jq -r '.created_by.login' | tr '[:upper:]' '[:lower:]')
 
 if [[ "${SKYUX_TEAM[@]}" =~ "${createdBy}" ]]; then
-  echo "$createdBy has permission to release."
+  echo -e "${createdBy} has permission to release."
 else
-  echo "$createdBy lacks permission to release.  Please contact the SKY UX team."
+  echo -e "${createdBy} lacks permission to release.  Please contact the SKY UX team."
 fi
