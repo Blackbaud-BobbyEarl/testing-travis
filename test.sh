@@ -14,3 +14,5 @@ elif [[ $NPM_PASSWORD ]]; then
 else
   echo -c "No credentials provided"
 fi
+
+travis raw build/$TRAVIS_BUILD_ID --json
