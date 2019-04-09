@@ -33,7 +33,7 @@ gem install travis
 createdBy=$(travis raw /v3/build/$TRAVIS_BUILD_ID --json --skip-completion-check | jq -r '.created_by.login') | tr '[:upper:]' '[:lower:]'
 
 if [[ "${SKYUX_TEAM[@]}" =~ "${createdBy}" ]]; then
-  echo "${createdBy} has permission to release."
+  echo "$createdBy has permission to release."
 else
-  echo "${createdBy} lacks permission to release.  Please contact the SKY UX team."
+  echo "$createdBy lacks permission to release.  Please contact the SKY UX team."
 fi
