@@ -15,5 +15,5 @@ else
   echo -c "No credentials provided"
 fi
 
-gem install travis
-travis raw /v3/build/$TRAVIS_BUILD_ID --json --skip-completion-check
+gem install travis ruby-jq
+travis raw /v3/build/$TRAVIS_BUILD_ID --json --skip-completion-check | jq -r '.created_by.login'
