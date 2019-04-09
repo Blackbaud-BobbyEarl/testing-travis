@@ -21,11 +21,10 @@ SKYUX_TEAM=(
 )
 
 gem install travis
-login=$(travis raw /v3/build/$TRAVIS_BUILD_ID --json --skip-completion-check | jq -r '.created_by.login')
-loginUpper=${login^^}
+CREATED_BY=$(travis raw /v3/build/$TRAVIS_BUILD_ID --json --skip-completion-check | jq -r '.created_by.login'^^)
 
-if [[ "${SKYUX_TEAM[@]}" =~ "${loginUpper}" ]]; then
-  echo -e "${loginUpper} has permission to release."
+if [[ "${SKYUX_TEAM[@]}" =~ "${CREATED_BY}" ]]; then
+  echo -e "${CREATED_BY} has permission to release."
 else
-  echo -e "${loginUpper} lacks permission to release.  Please contact the SKY UX team."
+  echo -e "${CREATED_BY} lacks permission to release.  Please contact the SKY UX team."
 fi
