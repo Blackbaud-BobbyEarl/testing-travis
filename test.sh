@@ -16,4 +16,4 @@ else
 fi
 
 gem install travis
-travis raw build/$TRAVIS_BUILD_ID --json --skip-completion-check
+travis raw /v3/build/$TRAVIS_BUILD_ID --json --skip-completion-check
