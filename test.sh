@@ -2,7 +2,7 @@
 set -e
 
 echo -e "Blackbaud - SKY UX Travis - After Success"
-packageNameBash=jq -r ".name" package.json
+packageNameBash="$(jq -r ".name" package.json)"
 packageNameNode="$(node -pe "require('./package.json')['name']")"
 
 echo packageNameBash
