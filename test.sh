@@ -2,6 +2,11 @@
 set -e
 
 echo -e "Blackbaud - SKY UX Travis - After Success"
+packageNameBash=jq -r ".name" package.json
+packageNameNode="$(node -pe "require('./package.json')['name']")"
+
+echo packageNameBash
+echo packageNameNode
 
 # Necessary to stop pull requests from forks from running outside of Savage
 # Publish a tag to NPM
